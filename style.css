@@ -317,7 +317,7 @@ nav {
   }
   
   .video-container video {
-    height: 100%;
+    height: ;
     width: auto;
     left: 50%;
     transform: translateX(-50%);
