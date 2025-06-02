@@ -317,7 +317,7 @@ nav {
   }
   
   .video-container video {
-    max-height: 60vh;
+    max-height: vh;
   }
 }
 
