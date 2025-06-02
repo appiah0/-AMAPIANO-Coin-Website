@@ -293,31 +293,33 @@ nav {
 .video-container {
   position: relative;
   width: 90%;
+  max-width: 1200px; /* Optional max-width for large screens */
   margin: 0 auto;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
-  overflow: hidden;
+  aspect-ratio: 16/9; /* Modern aspect ratio control */
+  background: #000; /* Black background for letterboxing */
 }
 
 .video-container video {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Preserves aspect ratio */
 }
 
+/* Mobile Optimization */
 @media (max-width: 768px) {
   .video-container {
-    width: 100%; /* Taller on mobile */
-    padding: 10px 0;
+    width: 100%;
+    aspect-ratio: unset; /* Override for mobile */
+    height: auto;
+    max-height: 70vh; /* Better mobile viewing */
   }
   
   .video-container video {
-    max-height: 60vh;
+    position: relative; /* Reset for mobile */
+    height: auto;
   }
 }
 
