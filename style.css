@@ -293,7 +293,7 @@ nav {
 .video-container {
   position: relative;
   width: 90%;
-  max-width: 1200px; /* Optional max-width for large screens */
+  max-width: ; /* Optional max-width for large screens */
   margin: 0 auto;
   aspect-ratio: 16/9; /* Modern aspect ratio control */
   background: #000; /* Black background for letterboxing */
@@ -317,7 +317,7 @@ nav {
   }
   
   .video-container video {
-    height: ;
+    height: 100%;
     width: auto;
     left: 50%;
     transform: translateX(-50%);
