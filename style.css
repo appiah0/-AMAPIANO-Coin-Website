@@ -291,6 +291,10 @@ nav {
 /* Video Section */
 /* Video Section Styling */
 .video-container {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
   position: relative;
   width: 100vw; /* Full viewport width */
   height: 56.25vw; /* 16:9 aspect ratio (9/16=0.5625) */
@@ -305,21 +309,21 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
+  min-width: ;
+  max-height: 80vh;
+  width: 100%;
   height: auto;
+display: block;
 }
 
 @media (max-width: 768px) {
   .video-container {
-    height: 70vh; /* Taller on mobile */
-    max-height: none;
+    width: 100%; /* Taller on mobile */
+    padding: 10px 0;
   }
   
   .video-container video {
-    width: 100%; /* Fill width on small screens */
-    height: auto;
+    max-height: 60vh;
   }
 }
 
