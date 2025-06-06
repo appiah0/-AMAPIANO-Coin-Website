@@ -490,6 +490,16 @@ nav {
     border-color: var(--dim-yellow);
 }
 
+.cardp {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    text-align: center;
+  transition: var(--transition-medium);
+}
+
 /* ==== Contract Section ==== */
 .contract {
     padding: 2rem;
