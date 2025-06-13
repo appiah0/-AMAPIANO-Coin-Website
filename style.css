@@ -662,6 +662,49 @@ nav {
     flex-wrap: wrap;
 }
 
+/* ==== Swap Container ====*/
+.swap-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+ /* Iframe styling */
+ .swap-iframe {
+   border: 3px solid #FFD700;
+   border-radius: 20px;
+   box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+   overflow: hidden;
+   width: 100%;
+ max-width: 500px; /* Ideal widget width */
+ height: 600px;
+ margin: 1rem 0;
+        }
+
+/* Title styling */
+ .swap-title {
+    color: #FFD700;
+   font-size: 2rem;
+    margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+/* Responsive adjustments */
+ @media (max-width: 768px) {
+ .swap-iframe {
+ height: 500px;
+  border-width: 2px;
+            }
+  .swap-title {
+   font-size: 1.5rem;
+            }
+        }
+
 /* ==== FAQ Section ==== */
 .faq {
     padding: 4rem 2rem;
@@ -942,6 +985,217 @@ footer p {
         box-shadow: none;
     }
 }
+
+/* ==== X REVIEW STYLES ==== */
+:root {
+    --dim-yellow: #FFD700;
+    --dim-white: rgba(255, 255, 255, 0.5);
+}
+
+/* ==== QUOTE-SPECIFIC SHADOW ==== */
+.quote {
+    box-shadow: -3px 3px 0 var(--dark-yellow);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.quote:hover {
+    box-shadow: -8px 8px 0 var(--dim-yellow);
+    transform: translateX(3px) translateY(-3px);
+}
+
+/* ==== EXPLICITLY REMOVE OTHER SHADOWS ==== */
+.quote-text,
+.quote-pfp,
+.x-icon,
+.verified-badge,
+.quote-header,
+.tweet-meta {
+    text-shadow: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+/* ==== BORDER ANIMATION (SHADOW-FREE) ==== */
+.quote:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--dim-yellow);
+    border-radius: 15px;
+    animation: borderPulse 3s infinite;
+    pointer-events: none;
+    /* No shadow here */
+}
+
+/* Verified Badge */
+.verified-badge {
+    width: 18px;
+    height: 18px;
+    fill: #1DA1F2;
+    margin-left: 5px;
+    filter: drop-shadow(0 0 2px rgba(29, 161, 242, 0.7));
+}
+
+/* Tweet Metadata */
+.tweet-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 65px;
+}
+
+.tweet-stats i {
+    margin: 0 5px 0 10px;
+}
+
+/* Border Animation (Enhanced) */
+.quote:hover::before {
+    animation: borderPulse 2.5s infinite ease-in-out;
+    box-shadow: 0 0 10px var(--dim-yellow);
+}
+
+.viral-quotes {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    border-top: 3px solid var(--dim-yellow);
+    border-bottom: 3px solid var(--dim-yellow);
+}
+
+.quote-title {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dim-yellow);
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.quote-container {
+    display: grid;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Quote Card */
+.quote {
+    display: block;
+    padding: 2.5rem;
+    border-radius: 15px;
+    background: rgba(15, 15, 15, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+
+/* Hover Effect - Animated Border */
+.quote:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.quote:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--dim-yellow);
+    border-radius: 15px;
+    animation: borderPulse 3s infinite;
+    pointer-events: none;
+}
+
+@keyframes borderPulse {
+    0% { clip-path: inset(0 100% 0 0); }
+    25% { clip-path: inset(0 0 100% 0); }
+    50% { clip-path: inset(0 0 0 100%); }
+    75% { clip-path: inset(100% 0 0 0); }
+    100% { clip-path: inset(0 100% 0 0); }
+}
+
+/* Profile Header */
+.quote-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.quote-pfp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.quote:hover .quote-pfp {
+    border-color: var(--dim-yellow);
+    transform: scale(1.05);
+}
+
+.quote-author {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 600;
+}
+
+/* X Icon */
+.x-icon {
+    width: 20px;
+    height: 20px;
+    fill: rgba(255, 255, 255, 0.7);
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.quote:hover .x-icon {
+    fill: var(--dim-yellow);
+    transform: scale(1.2);
+}
+
+/* Quote Text */
+.quote-text {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: white;
+    margin: 0;
+    padding-left: 65px; /* Align with profile */
+    position: relative;
+}
+
+.quote-text::before {
+    content: """;
+    position: absolute;
+    left: 45px;
+    top: -10px;
+    font-size: 60px;
+    color: rgba(255, 215, 0, 0.1);
+    font-family: serif;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .quote {
+        padding: 1.5rem;
+    }
+    
+    .quote-text {
+        font-size: 1.2rem;
+        padding-left: 0;
+    }
 
 /* ==== Viewport Stabilization ==== */
 .resize-animation-stopper * {
