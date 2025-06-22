@@ -2,29 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  <meta name="description" content="Official Amapiano Memecoin. Official $AMAPIANO Memecoin. $PIANO memecoin. Join the $PIANO movement on CoreDAO. $PIANO on CoreDAO. $AMAPIANO Coin on CoreDAO. Best memecoin to buy today. Potential memecoin to buy. The memecoin with a limited supply. Memecoin that can make you rich. Memecoin with no taxes. Best memecoin on CoreDAO. How to buy $PIANO. Where to buy $PIANO. Buy, trade, and groove with the hottest meme crypto of the year!">
-<meta name="keywords" content="Amapiano memecoin, $Amapiano memecoin. CoreDAO coin, $PIANO token, meme crypto, crypto music coin, buy memecoin, new cryptocurrency, pepe rival, web3 music project, crypto memecoin, Amapiano, Amapiano dance, Amapiano music, $PIANO memecoin, $PIANO coin, CoreDAO memecoin">
-<meta name="author" content="Amapiano Token Team">
-<meta name="google-site-verification" content="OkgGUggYe9IVHUqbQtZgqsRnY16vfzAItD8lKtblYu8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+  
     <title>Amapiano Coin - The Memecoin With A Beat!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
-  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&ampdisplay=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+  
 <body>
     <!-- Navigation -->
     <nav>
@@ -33,12 +20,24 @@
             <div class="line"></div>
             <div class="line"></div>
         </div>
+
+      <!-- Language Switcher -->
+      <div class="custom-lang-switcher" id="langSwitcher">
+  <div class="lang-selected" id="selectedLang">🌍Lang: 🇬🇧English</div>
+  <ul class="lang-options" id="langOptions">
+    <li data-lang="en" class="selected">🇬🇧English</li>
+    <li data-lang="zh">🇨🇳中文</li>
+    <li data-lang="fr">🇨🇵Français</li>
+    <li data-lang="ar">العربية🇸🇦</li>
+  </ul>
+      </div>
+      
         <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#tokenomics">Tokenomics</a></li>
-            <li><a href="#buy">How to Buy</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#home" data-i18n="home_nav">HOME</a></li>
+            <li><a href="#about" data-i18n="about_nav">ABOUT</a></li>
+            <li><a href="#tokenomics" data-i18n="tokenomics_nav">TOKENOMICS</a></li>
+            <li><a href="#buy" data-i18n="buy_nav">HOW TO BUY</a></li>
+            <li><a href="#faq" data-i18n="faq_nav">FAQ</a></li>
         </ul>
     </nav>
 
@@ -49,14 +48,39 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>🎹$AMAPIANO🎹</h1>
-        <p class="hero-text">The memecoin with a beat. $AMAPIANO is a whole damn groove in the memeverse.😎</p>
-        <a href="#" target="_blank" class="btn pulse">BUY $PIANO NOW</a>
-        <div class="hero-animated-texts">
-            <div class="hero-text-slide">BUY - IGNITE THE VIBES🔥 - HODL</div>
-        </div>
+        <h1 data-i18n="hero_title">🎹$AMAPIANO🎹</h1>
+        <p class="hero-text" data-i18n="hero_p">The memecoin with a beat. $AMAPIANO is a whole damn groove in the memeverse.😎</p>
+        <a href="#" target="_blank" class="btn pulse" data-i18n="hero_btn">BUY $PIANO NOW</a>
+
+      <!-- Sliding Text -->
+<div class="sliding-text-container">
+  <div class="sliding-text-border top"></div>
+  <div class="sliding-text-wrapper">
+    <div class="sliding-text" data-i18n="sliding_p">BUY • HODL • GROOVE • IGNITE THE VIBES • $PIANO TO THE MOON</div>
+  </div>
+  <div class="sliding-text-border bottom"></div>
+</div>
     </section>
 
+<!-- Live Price Card -->
+<section class="price-wrapper">
+  <div class="price-card" id="priceCard">
+    <h3><i class="fas fa-chart-line" style="margin-right: 6px;"></i><span data-i18n="priceCard_title">$PIANO Live Price</span></h3>
+    <p><abbr data-i18n="price_p">Price:</abbr> <span id="price" data-i18n="price_chart">Loading...</span></p>
+    <p><abbr data-i18n="liquidity_p">Liquidity:</abbr> <span id="liquidity" data-i18n="liquidity_chart">Loading...</span></p>
+    <p><abbr data-i18n="volume_p">24h Volume:</abbr> <span id="volume" data-i18n="volume_chart">Loading...</span></p>
+    <p><abbr data-i18n="change_p">24h Change:</abbr> <span id="change" data-i18n="change_chart">Loading...</span></p>
+  </div>
+</section>
+
+<!-- Floating Price Card -->
+  <a href="https://dexscreener.com/solana/H7puZiZjRVXaLFZ5XvgVBRsXVWvZvHwLn1YC8nCu7Ykr" target="_blank" class="floating-price-link">
+  <div class="floating-price-card" id="floatingPriceCard">
+    <i class="fas fa-chart-line" style="margin-right: 6px;"></i>
+    <strong data-i18n="float_p">$PIANO:</strong> <span id="floatingPrice" data-i18n="float_price">Loading...</span>
+  </div>
+  </a>  
+  
     <!-- Animated Logo Section -->
     <section class="logo-section">
         <img src="https://i.ibb.co/ym5YWyHM/Utool-20250603-183425402.png" width="305" height="260" class="logo2 floating" alt="$PIANO logo">
@@ -71,16 +95,16 @@
 
     <!-- About Section -->
     <section id="about" class="about">
-        <h2>About</h2>
+        <h2 data-i18n="about_title">ABOUT</h2>
         <div class="about-content">
             <div class="about-card">
-                <p>$AMAPIANO isn't just another memecoin — it's a whole vibe. Inspired by the electrifying sounds and smooth rhythms of Amapiano music, the viral dance music genre that took South Africa🇿🇦 and the world by storm, this coin brings the same energy to the crypto space.</p>
+                <p data-i18n="about_p1">$AMAPIANO isn't just another memecoin - it's a whole vibe. Inspired by the electrifying sounds and smooth rhythms of Amapiano music, the viral dance music genre that took South Africa🇿🇦 and the world by storm, this coin brings the same energy to the crypto space.</p>
             </div>
             <div class="about-card">
-                <p>Just like Amapiano music, $Amapiano coin is community-driven, infectious, and built to move people — not just with beats, but with memes, culture, and Web3 energy. But always remember, the ticker is $PIANO.</p>
+                <p data-i18n="about_p2">Just like Amapiano music, $Amapiano coin is community-driven, infectious, and built to move people - not just with beats, but with memes, culture, and Web3 energy. But always remember, the ticker is $PIANO.</p>
             </div>
             <div class="about-card">
-                <p>Whether you're a crypto enthusiast or a rhythm-loving degenerate, $Amapiano is your backstage pass to a party on the blockchain. Tap in, vibe out, and let the bassline take you to the moon!</p>
+                <p data-i18n="about_p3">Whether you're a crypto enthusiast or a rhythm-loving degenerate, $Amapiano is your backstage pass to a party on the blockchain. Tap in, vibe out, and let the bassline take you to the moon!</p>
             </div>
         </div>
     </section>
@@ -94,25 +118,30 @@
 
     <!-- Tokenomics Section -->
     <section id="tokenomics" class="tokenomics">
-        <h2>TOKENOMICS</h2>
+        <h2 data-i18n="tokenomics_title">TOKENOMICS</h2>
         <div class="card">
-            <p>Total Supply: 880,000 $PIANO, Lp Burnt🔥, Contract Renounced🔒, 100% In Liquidity, No Team Tokens, No Presale, No Roadmap, No Bullshit Taxes, No Promises, No Problem. Just Vibes.</p>
+            <p data-i18n="tokenomics_p">Total Supply: 880,000 $PIANO, Lp Burnt 🔥, Contract Renounced 🔒, 100% In Liquidity, No Team Tokens, No Presale, No Roadmap, No Bullshit Taxes, No Promises, No Problem. Just Vibes.</p>
         </div>
-<p class="cardp">"This is pure Amapiano meme culture. No middlemen. No empty hype. We ain't here to please tax collectors. We’re here to vibe😎."</p>
     </section>
 
+  <!-- BIG QUOTE -->
+<div class="big-quote">
+  <span class="quote-mark left">"</span>
+  <span class="quote-text1" data-i18n="quote_key"><strong style=" color: var(--dim-yellow);">$PIANO</strong> is the only memecoin with a limited supply. This is pure Amapiano meme culture. No middlemen. No empty hype.</span>
+  <span class="quote-mark right">"</span>
+</div>
 
-    <!-- Contract Address Section -->
+ <!-- Contract Address Section -->
     <section class="contract">
-        <h2>Contract Address</h2>
+        <h2 data-i18n="contract_title">CONTRACT ADDRESS</h2>
         <div class="address-box">
-            <p id="contractAddress">0x1234567890abcdef1234567890abcdef12345678</p>
+            <p id="contractAddress" data-i18n="contract_address">0x1234567890abcdef1234567890abcdef12345678</p>
             <button id="copyButton" class="btn copy-btn">
-                <i class="far fa-copy"></i> Copy
+                <i class="far fa-copy"></i> <span data-i18n="contract_btn">COPY</span>
             </button>
         </div>
-        <p class="small">Always verify the contract address!</p>
-        <p><a href="" target="_blank" class="contract-link">View on block explorer</a></p>
+        <p class="small" data-i18n="contract_small">Always verify the contract address!</p>
+        <p data-i18n="contract_link"><a href="https//:coredao.org" target="_blank" class="contract-link">view on block explorer</a></p>
     </section>
 
     <!-- Third Logo -->
@@ -122,51 +151,51 @@
 
     <!-- How to Buy Section -->
     <section id="buy" class="buy">
-        <h2>How To Buy $PIANO</h2>
+        <h2 data-i18n="steps_title">HOW TO BUY $PIANO</h2>
         <div class="steps">
             <!-- Step 1 -->
             <div class="step">
                 <img src="https://i.ibb.co/hRLX4hSx/18775494.png" alt="Get ETH" class="step-image">
-                <span class="step-number">1</span>
+                <span class="step-number" data-i18n="steps_number1">1</span>
                 <div class="step-content">
-                    <p class="step-h1">CREATE A WALLET:</p>
-                    <p class="step-h2">Download metamask or your wallet of choice from the app store or google play store for free. Desktop users, download the google chrome extension by going to <a href="https://metamask.io/" target="_blank" style="color: yellow;">metamask.io</a></p>
+                    <p class="step-h1" data-i18n="steps_h1">CREATE A WALLET:</p>
+                    <p class="step-h2" data-i18n="steps_p1">Download metamask or your wallet of choice from the app store or google play store for free. Desktop users, download the google chrome extension by going to <a href="https://metamask.io/" target="_blank" style="color: yellow; text-decoration: none;">metamask.io</a>.</p>
                 </div>
             </div>
 
             <!-- Step 2 -->
             <div class="step">
                 <img src="https://i.ibb.co/cKFkx33X/Utool-20250531-133902315-resized-683cc2749c88b.png" alt="CORE" class="step-image">
-                <span class="step-number">2</span>
+                <span class="step-number" data-i18n="steps_number2">2</span>
                 <div class="step-content">
-                    <p class="step-h1">GET CORE:</p>
-                    <p class="step-h2">Deposit CORE to your wallet to buy $PIANO. You can buy CORE on a decentralized exchange like IceCreamSwap, transfer from another wallet, or buy on a centralised exchange like <a href="https://partner.bybit.com/b/45350" target="_blank" style="color: yellow;">Bybit</a></p>
+                    <p class="step-h1" data-i18n="steps_h2">GET CORE:</p>
+                    <p class="step-h2" data-i18n="steps_p2">Deposit CORE to your wallet to buy $PIANO. You can buy CORE on a decentralized exchange like IceCreamSwap, transfer from another wallet, or buy on a centralised exchange like <a href="https://partner.bybit.com/b/45350" target="_blank" style="color: yellow; text-decoration: none;">Bybit</a>.</p>
                 </div>
             </div>
 
             <!-- Step 3 -->
             <div class="step">
                 <img src="https://i.ibb.co/0RXXc15y/hero-resized-683c73f9e512b.png" alt="icecreamswap" class="step-image">
-                <span class="step-number">3</span>
+                <span class="step-number" data-i18n="steps_number3">3</span>
                 <div class="step-content">
-                    <p class="step-h1">GO TO ICECREAMSWAP:</p>
-                    <p class="step-h2">Visit IceCreamSwap website. Go to <a href="/https://icecreamswap.com/" target="_blank" style="color: yellow;">icecreamswap.com</a> in google chrome or Metamask in-app browser. Connect your wallet. Paste $PIANO contract address into IceCreamSwap, select $PIANO, and confirm. Sign the wallet signature message to confirm.</p>
+                    <p class="step-h1" data-i18n="steps_h3">GO TO ICECREAMSWAP:</p>
+                    <p class="step-h2" data-i18n="steps_p3">Visit IceCreamSwap website. Go to <a href="/https://icecreamswap.com/" target="_blank" style="color: yellow; text-decoration: none;">icecreamswap.com</a> in google chrome or Metamask in-app browser. Connect your wallet. Paste $PIANO contract address into IceCreamSwap, select $PIANO, and confirm. Sign the wallet signature message to confirm.</p>
                 </div>
             </div>
 
             <!-- Step 4 -->
             <div class="step">
                 <img src="https://i.ibb.co/WNWxhwHF/2025060219204907-resized-683df9e36ca25.png" alt="Swap" class="step-image">
-                <span class="step-number">4</span>
+                <span class="step-number" data-i18n="steps_number4">4</span>
                 <div class="step-content">
-                    <p class="step-h1">SWAP CORE FOR $PIANO:</p>
-                    <p class="step-h2">Swap any amount of CORE for $PIANO. There is zero tax so you don't need to worry about buying with a specific slippage, although you may need to use slippage during times of market volatility.</p>
+                    <p class="step-h1" data-i18n="steps_h4">SWAP CORE FOR $PIANO:</p>
+                    <p class="step-h2" data-i18n="steps_p4">Swap any amount of CORE for $PIANO. There is zero tax so you don't need to worry about buying with a specific slippage, although you may need to use slippage during times of market volatility.</p>
                 </div>
             </div>
 
             <div class="step-actions">
-                <a href="" target="_blank" class="btn">BUY ON ICECREAMSWAP</a>
-                <a href="" target="_blank" class="btn btn-outline">BUY ON UNISWAP</a>
+                <a href="" target="_blank" class="btn" data-i18n="steps_btn1">BUY ON ICECREAMSWAP</a>
+                <a href="" target="_blank" class="btn btn-outline" data-i18n="steps_btn2">BUY ON ARCHERSWAP</a>
             </div>
         </div>
     </section>
@@ -176,21 +205,56 @@
         <img src="https://i.ibb.co/JWmzrXkp/2025060512140494-resized-684183914b301.png" width="305" height="260" class="logo4 floating" alt="$PIANO logo">
     </section>
 
+<!-- Piano Buy -->
+ <section class="buy-section">
+  <div class="buy-container">
+    <h2 data-i18n="buy_title">BUY $PIANO DIRECTLY HERE</h2>
+    <div class="rate-display">
+      1 CORE = <span class="highlight">100</span> $PIANO
+      <p class="buy-note">Max Buy: 10000 $PIANO • Min Buy: 100 $PIANO</p>
+    </div>
+    
+    <div class="input-group">
+      <input type="number" id="coreAmount" placeholder="Enter CORE amount" step="0.01" min="0">
+      <div class="error-message" id="amountError"></div>
+      <button class="calculate btn1" id="calculateBtn">CALCULATE</button>
+    </div>
+    
+    <div class="result-message" id="resultMessage">
+      You will receive <span class="highlight" id="receiveAmount">0</span> $PIANO
+    </div>
+    
+    <div class="result-message" id="sendMessage">
+      Send <span class="highlight" id="sendAmount">0</span> CORE to address below:
+    </div>
+    
+    <div class="addressBox">
+      <code id="coreAddress">0xYourCOREAddressHere</code>
+    </div>
+    
+    <button class="copy-btn1" id="copyBtn1">
+      <i class="far fa-copy"></i> COPY ADDRESS
+    </button>
+    
+    <p class="buy-note">Exact amount will be sent to your wallet instantly</p>
+  </div>
+ </section>
+        
 <!-- Swap Container -->
   <div class="swap-container">
-        <h2 class="swap-title">🎹 SWAP CORE FOR $PIANO</h2>
+        <h2 class="swap-title" data-i18n="swap_title">SWAP CORE FOR $PIANO</h2>
         <iframe 
             class="swap-iframe"
             src="https://icecreamswap.com/swap?outputCurrency=0x811af333E431f4a6283bFbB1E0cD244715FD9C54"
             allowfullscreen>
         </iframe>
-        <p style="color: #FFD700; text-align: center;">0% Tax • Lp Burnt 🔥 • No Specific Slippage</p>
+        <p style="color: #FFD700; text-align: center;" data-i18n="swap_p">0% Tax • Lp Burnt 🔥 • No Specific Slippage</p>
   </div>
 
   <!-- Comments Section -->
 <!-- Updated HTML with shadow effects -->
 <section class="viral-quotes">
-    <h2 class="quote-title">🔥 $PIANO TALK ON X 🔥</h2>
+    <h2 class="quote-title" data-i18n="quote_title">$PIANO TRENDING ON X 😲</h2>
     <div class="quote-container">
         <!-- Review 1 -->
         <a href="https://x.com/appiah_crypto/status/1893572836197113939?t=_vO0X330YODqYDE1zj1G0w&s=19" target="_blank" class="quote">
@@ -203,7 +267,7 @@
                     </svg>
                 </div>
             </div>
-            <p class="quote-text">"$PIANO is the only chart that makes me dance while I lose money 🎹💃"</p>
+            <p class="quote-text">"$PIANO is the only chart that gives me joy 🔥"</p>
             <div class="tweet-meta">
                 <span class="tweet-time">2h ago</span>
                 <span class="tweet-stats">
@@ -238,29 +302,29 @@
 
     <!-- FAQ Section -->
     <section id="faq" class="faq">
-        <h2>FAQ</h2>
+        <h2 data-i18n="faq_title">FAQ</h2>
         <div class="faq-item">
-            <button class="faq-question">What Is $PIANO?</button>
+            <button class="faq-question" data-i18n="faq_h1">What Is $PIANO?</button>
             <div class="faq-answer">
-                <p>$PIANO is the rhythm of the blockchain. It is the smoothest key in the memeverse—where chill Amapiano vibes meet boss-level crypto energy. It's not just a coin, it's a whole damn groove on the blockchain. A memecoin inspired by the smooth, soulful dance music born in South Africa🇿🇦. Just like the genre, $PIANO is bold, unstoppable, and made to move the crowd. $PIANO brings beats, memes, and community vibes to Web3.</p>
+                <p data-i18n="faq_p1">$PIANO is the rhythm of the blockchain. It is the smoothest key in the memeverse - where chill Amapiano vibes meet boss-level crypto energy. It's not just a coin, it's a whole damn groove on the blockchain. A memecoin inspired by the smooth, soulful dance music born in South Africa🇿🇦. Just like the genre, $PIANO is bold, unstoppable, and made to move the crowd. $PIANO brings beats, memes, and community vibes to Web3.</p>
             </div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">Where Can I Buy?</button>
+            <button class="faq-question" data-i18n="faq_h2">Where Can I Buy?</button>
             <div class="faq-answer">
-                <p>You can buy $PIANO on <a href="https://icecreamswap.com/" target="_blank" style="color: yellow;">IceCreamSwap</a>. More exchange listings coming soon.</p>
+                <p data-i18n="faq_p2">You can buy $PIANO on <a href="https://icecreamswap.com/" target="_blank" style="color: yellow; text-decoration: none;">IceCreamSwap</a>. More exchange listings coming soon.</p>
             </div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">Why Only 880k Supply?</button>
+            <button class="faq-question" data-i18n="faq_h3">Why Only 880k Supply?</button>
             <div class="faq-answer">
-                <p>Because 88 keys make a piano sing. We kept it classy — like a grand piano, not a garage sale trumpet. Because Beethoven didn't need a billion keys — and neither do we. It's not about quantity, it's about harmony — and 880K hits the right note.</p>
+                <p data-i18n="faq_p3">Because 88 keys make a piano sing. We kept it classy - like a grand piano, not a garage sale trumpet. Because Beethoven didn't need a billion keys - and neither do we. It's not about quantity, it's about harmony - and 880K hits the right note.</p>
             </div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">Why Launch On CoreDAO?</button>
+            <button class="faq-question" data-i18n="faq_h4">Why Launch On CoreDAO?</button>
             <div class="faq-answer">
-                <p>Because real beats need real speed. CoreDAO delivers. Low fees, high vibes — $PIANO belongs on CoreDAO. $PIANO needs a blockchain that dances to its rhythm, not one that lags behind. Ethereum gas fees kill the vibe. CoreDAO keeps the party going.</p>
+                <p data-i18n="faq_p4">Because real beats need real speed. CoreDAO delivers. Low fees, high vibes - $PIANO belongs on CoreDAO. $PIANO needs a blockchain that dances to its rhythm, not one that lags behind. Ethereum gas fees kill the vibe. CoreDAO keeps the party going.</p>
             </div>
         </div>
     </section>
@@ -268,14 +332,14 @@
     <!-- Small Logo -->
     <section class="logo-text-section">
         <div class="logo-text-container">
-            <img src="https://i.ibb.co/jxWyNnt/Utool-20250602-191806274.png" alt="Logo" class="side-logo">
-            <span class="logo-text">$AMAPIANO COIN</span>
+            <img src="https://i.ibb.co/Kxjswp93/Utool-20250619-085334380-resized-6853fc3f0299c.png" alt="Logo" class="side-logo">
+            <span class="logo-text" data-i18n="logo_p">$AMAPIANO COIN</span>
         </div>
     </section>
 
     <!-- Disclaimer -->
     <div class="disclaimer">
-        <p>Disclaimer: $Amapiano is a memecoin created purely for entertainment purposes. It holds no intrinsic value, no utility, promises no financial return, and is not intended as an investment. It's built by anonymous team. This project is inspired by the energy and vibe of Amapiano music and culture that the world love so much.</p>
+        <p data-i18n="disclaimer_p">⚠️ $Amapiano is a memecoin created purely for entertainment purposes. It holds no intrinsic value, no utility, promises no financial return, and is not intended as an investment. It has no formal team. This project is inspired by the energy and vibe of Amapiano music and culture that the world love so much.</p>
     </div>
 
     <!-- Footer -->
@@ -287,9 +351,10 @@
             <a href="https://telegram.org" target="_blank"><i class="fab fa-telegram"></i></a>
             <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
         </div>
-        <p>© 2025 Amapiano Coin. All rights reserved.</p>
+        <p data-i18n="footer_p">© 2025 Amapiano Coin. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+    </script>
 </body>
 </html>
